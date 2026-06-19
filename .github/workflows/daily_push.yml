@@ -1,9 +1,7 @@
-name: 每日推送汽车金融资讯
+name: 每30分钟推送汽车金融资讯
 on:
   schedule:
-    - cron: '0 1 * * *'
-    - cron: '0 6 * * *'
-    - cron: '0 9 * * *'
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 jobs:
   push:
@@ -17,4 +15,4 @@ jobs:
       - name: 安装依赖
         run: pip install requests
       - name: 运行推送
-        run: python bot_v2.py
+        run: python bot_v3.py
