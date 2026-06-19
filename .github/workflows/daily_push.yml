@@ -15,4 +15,4 @@ jobs:
       - name: 安装依赖
         run: pip install requests
       - name: 运行推送
-        run: python bot_v3.py
+        run: python bot_v4.py
