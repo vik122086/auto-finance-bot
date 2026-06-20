@@ -1,4 +1,4 @@
-name: 汽车金融推送(三引擎)
+name: 汽车金融推送(5源)
 on:
   schedule:
     - cron: '*/30 * * * *'
@@ -12,15 +12,4 @@ jobs:
         with:
           python-version: '3.10'
       - run: pip install requests
-      - name: 恢复去重缓存
-        uses: actions/cache@v3
-        with:
-          path: sent_cache.txt
-          key: sent-cache-${{ github.run_id }}
-          restore-keys: sent-cache-
-      - run: python bot_v10.py
-      - name: 保存去重缓存
-        uses: actions/cache@v3
-        with:
-          path: sent_cache.txt
-          key: sent-cache-${{ github.run_id }}
+      - run: python bot_v12.py
