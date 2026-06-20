@@ -61,7 +61,7 @@ def p():
  if cl["其他"]:
   tx="📌 **其他**\n"
   for x in cl["其他"][:3]:tx+=f"▸ **{x[0]}**\n"
-  el.append({"tag":"div","text":{"tag":"lark_md","content":tx}});el.append({"tag":"hr"}}
+  el.append({"tag":"div","text":{"tag":"lark_md","content":tx}});el.append({"tag":"hr"})
  el.append({"tag":"note","elements":[{"tag":"plain_text","content":"📡 天行+聚合 5源 | 每30分钟更新"}]})
  cd={"config":{"wide_screen_mode":True},"header":{"title":{"tag":"plain_text","content":f"📊 汽车金融行业{p2}"},"template":"blue"},"elements":el}
  r.post(W,json={"msg_type":"interactive","card":cd},timeout=10)
